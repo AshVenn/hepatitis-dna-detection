@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1,AUC
+LogisticRegression,0.9785714285714285,1.0,0.9571428571428572,0.9781021897810219,1.0
+RandomForest,1.0,1.0,1.0,1.0,1.0
+LinearSVC_Calibrated,1.0,1.0,1.0,1.0,1.0
