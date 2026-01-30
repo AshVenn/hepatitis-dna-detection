@@ -121,5 +121,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  /* Hide scrollbars while preserving scroll ability */
+  body::-webkit-scrollbar {
+    display: none;
   }
 }

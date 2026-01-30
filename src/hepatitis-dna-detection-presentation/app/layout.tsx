@@ -1,7 +1,10 @@
 import React from "react"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
+import { Inter } from "next/font/google"
 import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" })
 
 export const metadata: Metadata = {
   title: 'HCV Genotype Classification | MEIA Academic Project',
@@ -35,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={`${inter.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
