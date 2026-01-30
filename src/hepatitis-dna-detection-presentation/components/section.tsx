@@ -1,24 +1,25 @@
-import { cn } from '@/lib/utils'
-import { ReactNode } from 'react'
+import { ReactNode } from "react"
+import { cn } from "@/lib/utils"
 
 interface SectionProps {
-  children: ReactNode
+  id: string
   className?: string
-  id?: string
+  children: ReactNode
 }
 
-export function Section({ children, className, id }: SectionProps) {
+/**
+ * Base slide wrapper: full viewport height, centers content, enables snap scrolling.
+ */
+export function Section({ id, className, children }: SectionProps) {
   return (
     <section
       id={id}
       className={cn(
-        'min-h-screen w-full flex items-center justify-center px-6 py-12 relative snap-start scroll-mt-16 overflow-hidden',
+        "relative isolate flex min-h-screen items-center justify-center px-6 py-16 md:px-12 lg:px-16 snap-start",
         className
       )}
     >
-      <div className="max-w-6xl w-full mx-auto h-full">
-        {children}
-      </div>
+      <div className="w-full max-w-6xl">{children}</div>
     </section>
   )
 }
